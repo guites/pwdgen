@@ -1,0 +1,7 @@
+[x] mostrar definição da palavra
+[x] front-end de gerar as combinações (pesquisar algo estilo padlock)
+[x] toggle dark-mode / light-mode
+	[]finalizar css lmao
+[] ao escolher um subs. feminino, ajustar o adjetivo (mesma coisa masculino)
+[] mostrar nivel de segurança da senha e dados sobre o tempo de quebra via força bruta
+	[]adc palavras do dicionario no algoritmo de força?

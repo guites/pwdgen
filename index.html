@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>senhas humanas</title>
+     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+    <div class="in-screen dark">
+        <div class="toggle-mode">
+            <div>
+                <input type="radio" name="mode" id="light-mode" checked>
+                <label for="light-mode">
+                    Light
+                </label>
+            </div>
+            <div>
+                <input type="radio" name="mode" id="dark-mode">
+                <label for="dark-mode">
+                    Dark
+                </label>
+            </div>
+        </div>
+        <h1>senhas para humanos</h1>
+        <!-- <section id="intro">
+            <p class='your-new'>Que tal essa?</p>
+            <p class='shitty-pwd'><bold>uS4aCquX2u4isxs</bold><span>&#129326;</span><span>&#129326;</span></p>
+            <p>Dificil de lembrar, né?</p>
+            <p>Que tal uma senha segura, mas que faça algum sentido?</p>
+        </section> -->
+        <section id="tag-along">
+            <div class="random-result-box"></div>
+            <div class="tables">
+                <table id="substantivos"> 
+                    <thead>
+                        <tr>
+                            <th>Substantivo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <table id="adjetivos"> 
+                    <thead>
+                        <tr>
+                            <th>Adjetivo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tables-button">
+                <button id='sort'>Reordenar</button>
+            </div>
+        </section>
+        <section id="result">
+            <div class="div">
+                <input type="text" name="result" id="">
+                <span>
+                    <img src="copy.png" alt="Clique para copiar">
+                </span>
+            </div>
+        </section>
+    </div>
+    <div class="alerts">
+        <p><bold>Boa!</bold> Sua <bold>nova senha</bold> foi copiada com <bold>sucesso!</bold></p>
+    </div>
+    <div class="cards substantivo">
+        <div class="card-header"><p>Substantivo</p><close>x</close></div>
+        <div class="card-body">
+            <h5>Título</h5>
+            <p>Descrição........</p>
+        </div>
+    </div>
+    <div class="cards adjetivo">
+        <div class="card-header"><p>Adjetivo</p><close>x</close></div>
+        <div class="card-body">
+            <h5>Título</h5>
+            <p>Descrição........</p>
+        </div>
+    </div>
+    <div class="off-screen">
+        <section id="referencias">
+            <h6>Referências</h6>
+        </section>
+    </div>
+
+    <!-- <section id="request">
+        <form action="">
+            <h2 class="method">Método</h2>
+            <div>
+                <input type="radio" id="jantersson" name="pwd-style" value="1" checked>
+                <label for="jantersson">Jantersson Method</label>
+            </div>
+            <div>
+                <input type="radio" id="marqueiras" name="pwd-style" value="2">
+                <label for="marqueiras">Marqueiras Method</label>
+            </div>
+            <button type="submit">Gerar <span>Passwordersson</span></button>
+        </form>
+    </section>
+    <section id="response">
+        <div class="div">
+            <h3>Seu passwordersson está pronto!</h3>
+            <h4 id='pwd-result'></h4>
+        </div>
+    </section> -->
+    <script src="zxcvbn.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
