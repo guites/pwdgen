@@ -137,7 +137,7 @@ function apiGet(method){
 }
 function getWords(){
     let reqs = new Array();
-    for (let i = 0; i < 20; i++){
+    for (let i = 0; i < 50; i++){
         reqs.push(fetch(wordsURL));
     }
     Promise.all(reqs)
@@ -179,7 +179,7 @@ function classifyWords(){
                 } else {
                     const gramGrp = (typeof dom.getElementsByTagName('gramGrp')[0] === 'undefined') ? '' : dom.getElementsByTagName('gramGrp')[0].innerHTML;
                     const orth = (typeof dom.getElementsByTagName('orth')[0] === 'undefined') ? '' : dom.getElementsByTagName('orth')[0].innerHTML;
-                    console.log(gramGrp + " ----- " + orth);
+                    //console.log(gramGrp + " ----- " + orth);
                     const def = (typeof dom.getElementsByTagName('def')[0] === 'undefined') ? '' : dom.getElementsByTagName('def')[0].innerHTML;
                     const definition = `<p data-ref='${orth}'>${orth} <small>(${gramGrp})</small>${def}</p>`;
                     const insertHTML = `<tr><td>${orth}</td></tr>`;
