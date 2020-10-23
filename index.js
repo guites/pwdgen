@@ -11,7 +11,6 @@ const abrevAdj = ['adj.'];
 const abrevAdv = ['adv.'];
 const referencias = new Array();
 const refSection = document.querySelector('#referencias');
-const radioBtns = [...document.querySelectorAll('input[type="radio"]')];
 const inScreen = document.querySelector('.in-screen');
 const body = document.querySelector('body');
 const copyIcon = document.querySelector('#result img');
@@ -24,8 +23,62 @@ const adjetivoCardTitle = adjetivoCard.querySelector('h5');
 const adjetivoCardDesc = adjetivoCard.querySelector('.card-body > p');
 const closeAdjetivoCard = adjetivoCard.querySelector('close');
 
+const html = document.querySelector('html');
+const radioBtns = [...document.querySelectorAll('input[type="radio"]')];
+
+const getStyle = (element, style) => {
+    return window
+        .getComputedStyle(element)
+        .getPropertyValue(style)
+}
+const initialColors = {
+    v1: getStyle(html, "--v1"),
+    v2: getStyle(html, "--v2"),
+    v3: getStyle(html, "--v3"),
+    v4: getStyle(html, "--v4")
+}
+const darkMode = {
+    v1: "#222",
+    v2: "#444",
+    v3: "#303030",
+    v4: "#555",
+    v5: "#fff"
+}
+const lightMode = {
+    v1: "#E0E0E0",
+    v2: "#C2C2C2",
+    v3: "#D6D6D6",
+    v4: "#ADADAD",
+    v5: "#000"
+}
+const changeColors = (colors) => {
+    Object.keys(colors).map(key =>{
+        html.style.setProperty(`--${key}`,colors[key]);
+        // console.log(colors[key])
+        // console.log(key)
+    })
+}
+
+const checkTheme = () => {
+    if(document.querySelector('input[type="radio"]:checked').id.includes('dark')){
+        changeColors(darkMode);
+    } else {
+        changeColors(lightMode);
+    }
+}
+
+radioBtns.forEach(radioBtn => {
+    radioBtn.onclick = (e) => {
+        checkTheme();
+    }
+});
+
+
+
+
+
 getWords();
-checkTheme();
+// checkTheme();
 enableCloseCards();
 showCards();
 function enableCloseCards(){
@@ -56,21 +109,21 @@ function showCards(){
     })
 
 }
-function checkTheme(){
-    if(document.querySelector('input[type="radio"]:checked').id.includes('dark')){
-        body.classList.remove('light');
-        body.classList.add('dark');
-        inScreen.classList.remove('light');
-        inScreen.classList.add('dark');
-        copyIcon.src = "copy-white.png";
-    } else {
-        body.classList.add('light');
-        body.classList.remove('dark');
-        inScreen.classList.add('light');
-        inScreen.classList.remove('dark');
-        copyIcon.src = "copy.png";
-    }
-}
+// function checkTheme(){
+//     if(document.querySelector('input[type="radio"]:checked').id.includes('dark')){
+//         body.classList.remove('light');
+//         body.classList.add('dark');
+//         inScreen.classList.remove('light');
+//         inScreen.classList.add('dark');
+//         copyIcon.src = "copy-white.png";
+//     } else {
+//         body.classList.add('light');
+//         body.classList.remove('dark');
+//         inScreen.classList.add('light');
+//         inScreen.classList.remove('dark');
+//         copyIcon.src = "copy.png";
+//     }
+// }
 function clickToCopy(copyElement) {
     /* Select the text field */
     copyElement.select();
@@ -217,8 +270,4 @@ function classifyWords(){
 function getStrenght(pwd){
     console.log(zxcvbn(pwd));
 }
-radioBtns.forEach(radioBtn => {
-    radioBtn.onclick = (e) => {
-        checkTheme();
-    }
-});
+
