@@ -1,0 +1,17 @@
+dark colors ----
+background-color: #222;
+color: #fff;
+
+background-color:#444;
+border-color:#fff;
+
+background-color:#303030;
+border-color:#fff;
+
+border-color:#555;
+color:#555;
+
+v1 : #222 #E0E0E0
+v2 : #444 #C2C2C2
+v3 : #303030 #D6D6D6
+v4 : #555 #ADADAD

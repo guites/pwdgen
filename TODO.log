@@ -7,3 +7,12 @@
 [] ao escolher um subs. feminino, ajustar o adjetivo (mesma coisa masculino)
 [] mostrar nivel de segurança da senha e dados sobre o tempo de quebra via força bruta
 []adc palavras do dicionario no algoritmo de força?
+[]" O mesmo que _palavra sinônima_." ", o mesmo que _papa-moscas_." "O mesmo que _sape_." "(V. maçaroco)" 
+[] Novas palavras sempre por último
+[] Ao gerar nova palavra, trocar a outra etimologia por um valor aleatório já existente
+	[] o valor aleatório já existente não deve ser o que já está como front dã
+[] modo casual que joga as palavras no api de gifs
+
+-------- BUGS ---------------
+modal_size => criada função para gerar excerpt caso o texto seja maior que um tamanho limite de caractéres
+tr_size => setado tr_body para 100%. talvez existam palavras maiores

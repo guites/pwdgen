@@ -99,25 +99,6 @@ body .alerts p {
   width: 265px;
 }
 
-body.light {
-  color: #222;
-  background-color: #fff;
-}
-
-body.light .alerts {
-  background-color: #00bc8c;
-}
-
-body.light .cards .card-header {
-  color: #444;
-  border-color: #444;
-}
-
-body.light .cards .card-body {
-  color: #303030;
-  border-color: #444;
-}
-
 body.dark {
   background-color: var(--v1);
   color: var(--v5);
@@ -214,38 +195,6 @@ bold {
   border: 1px solid transparent;
 }
 
-.in-screen.light .toggle-mode div input:checked + label {
-  color: #303030;
-  background-color: #fff;
-}
-
-.in-screen.light h1 {
-  color: black;
-}
-
-.in-screen.light section {
-  background-color: #fff;
-  border-color: #555;
-  -webkit-box-shadow: 3px -1px 3px -2px #5158BB;
-  box-shadow: 3px -1px 3px -2px #5158BB;
-}
-
-.in-screen.light section#tag-along .tables table {
-  background-color: #258cd1;
-  border-color: #95c9ec;
-  color: white;
-}
-
-.in-screen.light section#tag-along .tables table thead {
-  border-color: #95c9ec;
-}
-
-.in-screen.light section#tag-along .tables-button button {
-  background-color: #2384c6;
-  border-color: #217dbb;
-  color: #fff;
-}
-
 .in-screen.dark .toggle-mode div label {
   border-color: var(--v4);
   color: var(--v4);
@@ -284,8 +233,9 @@ section#result div {
           justify-content: center;
 }
 
-section#result span img {
+section#result span img, section#result span svg {
   width: 32px;
+  margin-left: 10px;
 }
 
 section#tag-along .random-result-box {
@@ -318,6 +268,7 @@ section#tag-along .tables table thead {
 section#tag-along .tables table tbody {
   display: inline-block;
   position: relative;
+  width: 100%;
   height: 23px;
   min-height: 23px;
   -webkit-transform-style: preserve-3d;

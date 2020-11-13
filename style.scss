@@ -80,25 +80,6 @@ body{
             width:265px;
         }
     }
-    &.light{    
-        // background-color:#B8E1FF;
-        // color:#000501;
-        color:#222;
-        background-color:#fff;
-        .alerts{
-            background-color:#00bc8c;
-        }
-        .cards{
-            .card-header{
-                color:#444;
-                border-color:#444;
-            }
-            .card-body{
-                color:#303030;
-                border-color:#444;
-            } 
-        }
-    }
     &.dark{
         background-color:var(--v1);
         color:var(--v5);
@@ -184,55 +165,6 @@ bold{
             }
         }
     }
-    &.light{
-        .toggle-mode{
-            div{
-                label{
-                    // border-color:#247BA0;
-                    // background-color:transparent;
-                 }
-                 input{
-                     &:checked + label {
-                        //  background-color:aliceblue;
-                        color:#303030;
-                        background-color:#fff;
-                     }      
-                 }
-            }
-
-        }
-        h1{
-            color:black;
-        }
-        section{
-            // background-color:#97DFFC;
-            background-color:#fff;
-            border-color:#555;
-            // border-color:#247BA0;
-            -webkit-box-shadow: 3px -1px 3px -2px #5158BB;
-            -moz-box-shadow: 3px -1px 3px -2px #5158BB;
-            box-shadow:3px -1px 3px -2px #5158BB;
-        }
-        section#tag-along{
-            .tables{
-                table{
-                    background-color:#258cd1;
-                    border-color:#95c9ec;
-                    color:white;
-                    thead{
-                        border-color:#95c9ec;
-                    }
-                }
-            }
-            .tables-button{
-                button{
-                    background-color:#2384c6;
-                    border-color:#217dbb;
-                    color:#fff;
-                }
-            }
-        }
-    }
     &.dark{
         .toggle-mode{
             div{
@@ -271,8 +203,9 @@ section#result{
         justify-content: center;
     }
     span{
-        img{
+        img,svg{
             width:32px;
+            margin-left:10px;
         }
     }
 }
@@ -295,6 +228,7 @@ section#tag-along{
             tbody{
                 display:inline-block;
                 position:relative;
+                width:100%;
                 height: 23px;
                 min-height:23px;
                 transform-style:preserve-3d;
